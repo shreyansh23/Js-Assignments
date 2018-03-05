@@ -10,6 +10,26 @@ function checkForm(form) {
 		}
 
 
+		
+		
+		if(!reAge.test(form.age.value))
+		{
+			errors.push("Invalid Age entered!");
+		}
+		if(!reEmail.test(form.email.value))
+		{
+			errors.push("Invalid Email ID!");
+		}	
+		if((form.password1.value=="")||(form.password2.value==""))
+		{   console.log("entered in passV");
+			errors.push("Password Not Entered!");
+
+		}
+		else{
+			if(form.password1.value!=form.password2.value)
+			{errors.push("Passwords do not match!");}
+		}
+
 		if(form.name.value=="")
 		{
 			//alert("Error: Input Name is Empty!");
@@ -29,26 +49,11 @@ function checkForm(form) {
 			//return false;
 			
 		}
-		
-		if(!reAge.test(form.age.value))
-		{
-			errors.push("Invalid Age entered!");
-		}
-		if(!reEmail.test(form.email.value))
-		{
-			errors.push("Invalid Email ID!");
-		}	
-		if((form.password1.value=="")||(form.password2.value==""))
-		{   console.log("entered in passV");
-			errors.push("Password Not Entered!");
-
-		}
-		else{
-			if(form.password1.value!=form.password2.value)
-			{errors.push("Passwords do not match!");}
-		}
         
-
+        if(!reName.test(form.city.value))
+        	{
+        		errors.push("Invalid City Name!");
+        	}
 
 
 
