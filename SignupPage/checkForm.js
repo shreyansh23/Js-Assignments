@@ -2,6 +2,8 @@ function checkForm(form) {
 		var errors=[];
 		var rePhone=/^[6-9]{1}[0-9]{9}$/;
 		var reName =/^[\w ]+$/;
+		var reAge =/^[1-9]{1}[0-9]?$/;
+		var reEmail =/[a-zA-Z]{1}[\w]*(@){1}[a-zA-Z]+(.)[a-zA-Z]+$/;
 		if(!rePhone.test(form.phoneNumber.value))
 		{
 			errors.push("Invalid Phone Number!");
@@ -27,8 +29,31 @@ function checkForm(form) {
 			//return false;
 			
 		}
+		
+		if(!reAge.test(form.age.value))
+		{
+			errors.push("Invalid Age entered!");
+		}
+		if(!reEmail.test(form.email.value))
+		{
+			errors.push("Invalid Email ID!");
+		}	
+		if((form.password1.value=="")||(form.password2.value==""))
+		{   console.log("entered in passV");
+			errors.push("Password Not Entered!");
+
+		}
+		else{
+			if(form.password1.value!=form.password2.value)
+			{errors.push("Passwords do not match!");}
+		}
+        
+
+
+
+
 		if(errors.length>0)
-		{var msg="ERRORS:\n\n"
+		{var msg="ERRORS:\n\n";
 	     for (var i = 0; i <errors.length; i++) 
 	       {msg+=errors[i]+"\n";}
 	      alert(msg);
