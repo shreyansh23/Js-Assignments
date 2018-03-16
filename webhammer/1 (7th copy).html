@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>14</title>
+</head>
+<body>
+	<p id="demo"></p>
+<script type="text/javascript">
+	var a=prompt("enter username");
+	var b=prompt("word1");
+	var c=prompt("word2");
+	var d=prompt("word3");
+	var e=prompt("word4");
+	var f=prompt("word5")
+	var col=prompt("enter a color ");
+    var x=document.getElementById('demo') ;
+    x.innerHTML="<span>"+b+"</span> Tom and <span>"+c+" </span>Jerry fight with each other.<span>"+d+"</span> Tom and <span>"+e+" </span>Jerry <span>"+f+" </span>fight with each other.";
+    var collection =document.getElementsByTagName("span");
+   // document.getElementsByTagName("span")[0].style.color=col;
+      //  document.getElementsByTagName("span")[1].style.color=col;
+
+    //collection[0].style.color=col;
+   // collection[1].style.color=col;    
+   for (var i = collection.length - 1; i >= 0; i--) {
+   	collection[i].style.color=col;
+   }
+</script>
+
+
+</body>
+</html>

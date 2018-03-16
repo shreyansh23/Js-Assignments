@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<title>Close a new window</title>
+</head>
+<body>
+
+<script>
+
+var subWindow
+
+function openSW() {
+
+	subWindow = window.open("http://www.google.com","example","height=300,width=300,left=100,top=100,resizable=no,toolbar=no,scrollbars=no,status=no,location=no")
+
+}
+
+function closeSW() {
+
+	subWindow.close()
+		
+}
+
+</script>
+
+<br><br>
+
+
+
+<form>
+<img src="images/1.jpeg" onClick="openSW()">
+<input type="button" value="Close" onClick="closeSW()">
+</form>
+
+
+
+</body>
+</html>

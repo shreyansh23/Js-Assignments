@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head><title>14</title>
+<style>img{height:192px; width:342px;}
+</style></head>
+
+<body>
+<img id="image"  src="images/1.jpeg" onclick="imageChanger()">
+<script>
+var count=0;
+var x=document.getElementById('image');
+function imageChanger(){
+count++;
+if(count==1)
+
+{x.src="images/2.jpeg";
+}
+ if(count==2)
+{x.src="images/3.jpeg"}
+ if(count==3)
+{x.src="images/4.jpeg"
+}
+else 
+	{x.src='images/1.jpeg';
+count=0;}}
+</script>
+</body>
+</html>
+

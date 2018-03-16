@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		img{
+			width: 300px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<img src="images/1.jpeg" >
+
+	<img src="images/3.jpeg"  >
+
+	<img src="images/5.jpeg"  >
+	<img src="images/7.jpeg" onmouseover="f1()" onmouseout="f2()">
+
+    <script type="text/javascript">
+    	var a=document.getElementsByTagName("img")[0];
+    	var b=document.getElementsByTagName("img")[1];
+    	var c=document.getElementsByTagName("img")[2];
+    	function f1(){
+    		a.src='images/2.jpeg';
+    		b.src='images/4.jpeg';
+    		c.src='images/6.jpeg';
+    		console.log("dfs");
+    	}
+    	function f2(){
+    		a.src='images/1.jpeg';
+    		b.src='images/3.jpeg';
+    		c.src='images/5.jpeg';
+
+    	}
+
+
+	
+</script>
+</body>
+</html>

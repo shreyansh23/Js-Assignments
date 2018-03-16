@@ -1,0 +1,45 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>df</title>
+</head>
+<body>
+
+<script>
+	var x=0;
+	function c(){
+		
+		{console.log(x);
+		x++;
+		setTimeout(c,1000);
+		}
+		if(x==11){
+			console.log("stopped");
+			clearTimeout(draw);
+		}
+	}
+	var draw=setTimeout(c,1000);
+
+</script>	
+</body>
+</html>

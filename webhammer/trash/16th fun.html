@@ -1,0 +1,102 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Marble</title>
+	<style type="text/css">
+		img{height:72px;
+		  	width: 72px;}
+	.box{
+		display:inline-block;
+		width: 72px;
+		height: 72px;
+		}
+
+
+	</style>
+	
+</head>
+<body >
+	<div class="box"></div>
+	<div class="box"><img src="images/marble1.jpg" id="o1" onmouseout="draw=setInterval(select,1000)" onmouseover="clearInterval(draw);"></div>
+	<div class="box"></div>
+	<div class="box"><img src="images/marble1.jpg" id="o2" onmouseout="draw=setInterval(select,1000)" onmouseover="clearInterval(draw);"></div>
+	<div class="box"></div><br>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div><br>
+	<div class="box"><img src="images/marble1.jpg" id="o6" onmouseout="draw=setInterval(select,1000)" onmouseover="clearInterval(draw);"></div>
+	<div class="box"></div>
+	<div class="box"><img src="images/marble1.jpg"></div>
+	<div class="box"></div>
+	<div class="box"><img src="images/marble1.jpg" id="o3" onmouseout="draw=setInterval(select,1000)" onmouseover="clearInterval(draw);"></div><br>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div><br>
+	<div class="box"></div>
+	<div class="box"><img src="images/marble1.jpg" id="o5" onmouseout="draw=setInterval(select,1000)" onmouseover="clearInterval(draw);"></div>
+	<div class="box"></div>
+	<div class="box"><img src="images/marble1.jpg" id="o4" onmouseout="draw=setInterval(select,1000)" onmouseover="clearInterval(draw);"></div>
+	<div class="box"></div>
+
+<script type="text/javascript">
+select();
+var count=1;
+function select() {
+	
+	if (count==0) {document.getElementById('o1').src="images/marble1.jpg";}
+	if (count==1) {document.getElementById('o2').src="images/marble1.jpg";}
+	if (count==2) {document.getElementById('o3').src="images/marble1.jpg";}
+	if (count==3) {document.getElementById('o4').src="images/marble1.jpg";}
+	if (count==4) {document.getElementById('o5').src="images/marble1.jpg";}
+	if (count==5) {document.getElementById('o6').src="images/marble1.jpg";}
+	count++;
+	count=(count%6);
+	if (count==0) {document.getElementById('o1').src="images/omarble.jpg";}
+	if (count==1) {document.getElementById('o2').src="images/omarble.jpg";}
+	if (count==2) {document.getElementById('o3').src="images/omarble.jpg";}
+	if (count==3) {document.getElementById('o4').src="images/omarble.jpg";}
+	if (count==4) {document.getElementById('o5').src="images/omarble.jpg";}
+	if (count==5) {document.getElementById('o6').src="images/omarble.jpg";}	
+
+}
+var draw=setInterval(select,1000);
+
+function ddraw(){}
+
+//var stop=clearId(select);
+</script>
+
+</body>
+</html>
